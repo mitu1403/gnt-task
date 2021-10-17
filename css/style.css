@@ -33,6 +33,7 @@
   left: 0;
   z-index: 15;
   background: url("../img/texture.png");
+  opacity: 0.4;
 }
 
 #hero .caption {
