@@ -17,29 +17,90 @@
   <div class="container-fluid main">
     <div class="container banner">
       <div class="row"><br></div>
+      <!--  NavBar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-transparent stroke">
-        <a class="navbar-brand" href="#" style="color: white;">GNT_Task</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-          <i class='bx bx-filter'></i>
+        <a class="navbar-brand" href="#" style="color: white;">gnt_task</a>
+        <button class="navbar-toggler" 
+                type="button" 
+                data-toggle="collapse" 
+                data-target="#navbarTogglerDemo03" 
+                aria-controls="navbarTogglerDemo03" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation"
+                style="color: white;">
+          <i class='bx bx-filter' style="color: white;"></i>
         </button>
         <div class="collapse navbar-collapse navset " id="navbarTogglerDemo03">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> 
             <li class="nav-item active">
-              <a class="nav-link" href="#" style="color: #759485;">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#" style="color: #759485;">
+                Home <span class="sr-only">(current)</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: white;">About</a>
+              <a class="nav-link" href="#" style="color: white;">
+                About
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: white;">Services</a>
+              <a class="nav-link" href="#" style="color: white;">
+                Services
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: white;">LogIn</a>
+              <a class="nav-link" 
+                  href="#" data-toggle="modal" 
+                  data-target="#popUpWindow" 
+                  style="color: white;">LogIn
+              </a>
             </li>
           </ul>
         </div>
+        <!--  LogIn Modal  -->
+        <div class="modal fade bd-example-modal-sm" id="popUpWindow" >
+          <div class="modal-dialog" style="background-color: #232323;">
+            <div class="modal-content" style="background-color: #232323;">
+              <!--  body  -->
+              <div class="modal-body">
+                <form role="form">
+                  <br>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h1 class="modal-title text-center">
+                    <br>
+                    <i class='bx bx-user'></i><br>Log In
+                  </h1>
+                  <div class="form-group">
+                    <br><br>
+                    <input type="email" 
+                            class="form-control" 
+                            placeholder="Username / Email" 
+                            style="background-color: transparent; width: 70%; margin: 0 auto;">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" 
+                            class="form-control" 
+                            placeholder="Password" 
+                            style="background-color: transparent; width: 70%; margin: 0 auto;">
+                  </div>
+                  <div class="loninbtn">
+                    <br>
+                    <a class="btn btn-primary" href="dashboard.html" role="button">
+                      LogIn
+                    </a>
+                    <button class="btn btn-primary reset" href="#" role="button" type="reset">
+                      Reset
+                    </button>
+                  </div>
+                </form>
+                <br>
+              </div>  
+            </div>
+          </div>
+        </div>
       </nav>
+      <!--  Banner -->
       <div class="row text-content">
+        <!--  For mbl device  -->
         <div class="col-lg-4 col-md-3 col-sm-3 img-sec">
           <div class="container">
             <div class="row row2"><br><br></div>
@@ -48,49 +109,58 @@
             </div>
           </div>
         </div> 
+        <!--                  -->
         <div class="col-lg-8 col-md-9 col-sm-9">
           <div class="row row1 " style="height: 16vh;"></div>
           <div class="container text-box">
-            <br><br class="br"><br class="br"><br class="br"><br class="br"><br class="br"><br class="br">
-            <span class="text1">I'm</span> <br>
-            <span class="text2">MAHMUDA</span><br>
-            <span class="text3">Major experienced in Web Designing.</span>
+            <br>
+            <br class="br"><br class="br"><br class="br"><br class="br">
+            <br class="br"><br class="br">
+            <span class="text1">I am</span> <br>
+            <span class="text2">MAHMUDA.</span><br>
+            <span class="text3">Experienced in Web Designing.</span>
             <br><br><br>
-            <a class="btn btn-primary" href="#" role="button">Explore My Portfolio</a>
+            <a class="btn btn-primary" 
+                href="https://github.com/mitu1403" 
+                role="button">
+                Explore My Portfolio
+            </a>
             <br><br><br>
-            <i class='bx bxl-facebook-square'></i>
-            <i class='bx bxl-linkedin-square'></i>
-            <i class='bx bxl-github'></i>
+            <a href="https://github.com/mitu1403"><i class='bx bxl-facebook-square'></i></a>
+            <a href="https://www.linkedin.com/in/mahmuda-akter-mitu/"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="mailto:mmitu163069@bscse.uiu.ac.bd"><i class='bx bx-mail-send'></i></a>
+            <a href="https://github.com/mitu1403"><i class='bx bxl-github'></i></a>
           </div>
         </div>  
         <div class="col-lg-4 col-md-3 col-sm-3 image-sec">
           <div class="container">
-            <div class="row row2"><br><br></div>
+            <div class="row row2">
+              <br class="br2"><br class="br2">
+            </div>
             <div class="row" >
-              <img src="img/alt.jpg" id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()" >
+              <img src="img/alt.jpg" 
+                    id="img1" 
+                    onmouseover="setNewImage()" 
+                    onmouseout="setOldImage()" >
             </div>
           </div>
         </div>      
       </div>
     </div>
   </div>
-  <section></section>
-  
+  <!--  JS Part -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="app.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
   <script>
+    /*  For MouseOver & MouseOut  */
     function setNewImage(){
       document.getElementById("img1").src = "img/alt.jpg";
     }
     function setOldImage(){
       document.getElementById("img1").src = "img/alt.jpg";
     }
-
-    
   </script>
-  
 </body>
 </html>

@@ -1,6 +1,6 @@
 @font-face {
-  font-family: oswald;
-  src: url(../fonts/Oswald-Bold.ttf);
+  font-family: lobster;
+  src: url(../fonts/Lobster-Regular.ttf);
 }
 @font-face {
   font-family: ptsans;
@@ -10,10 +10,10 @@ body {
   background-color: #232323;
   font-family: "poppins", sans-serif;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
+/*  Fade In */
 .element {
-  animation: pulse 5s 2;
+  animation: pulse 5s 1;
 }
 @keyframes pulse {
   0% {
@@ -37,8 +37,12 @@ body {
 .banner {
   z-index: 100;
 }
-
 /*  Navbar  */
+.navbar-brand {
+  font-family: lobster;
+  font-size: 30px;
+  color: #759485;
+}
 .navset {
   margin-left: 52%;
 }
@@ -79,6 +83,33 @@ nav.stroke ul li a:hover:after {
   font-size: 35px;
   color: white;
 }
+form {
+  color: white;
+}
+.modal-title {
+  font-weight: bold;
+}
+.modal-title .bx-user {
+  font-size: 50px;
+  font-weight: 100;
+}
+div .form-group input {
+  color: white;
+}
+.loninbtn {
+  margin-left: 30%;
+}
+.loninbtn a,
+.loninbtn button {
+  padding: 5px 20px;
+}
+.reset {
+  margin-left: 5%;
+}
+.close {
+  color: white;
+}
+/*  Text contents */
 .text-box {
   color: #fff;
   line-height: 1;
@@ -89,10 +120,10 @@ nav.stroke ul li a:hover:after {
   margin-top: 10%;
 }
 .text-box .text2 {
-  font-size: 130px;
+  font-size: 120px;
   margin-left: -1%;
   color: transparent;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px #759485;
   font-weight: 600;
   background: url(../img/back.png);
   -webkit-background-clip: text;
@@ -105,21 +136,23 @@ nav.stroke ul li a:hover:after {
   }
 }
 .text-box .text3 {
-  font-size: 35px;
+  font-size: 32px;
   font-weight: 500;
 }
-i {
+.text-box a i {
   font-size: 24px;
+  color: white;
 }
-.bxl-linkedin-square,
-.bxl-github {
-  margin-left: 25px;
+.text-box .bxl-linkedin-square,
+.text-box .bxl-github,
+.text-box .bx-mail-send {
+  margin-left: 10px;
+  color: white;
 }
-.bx:hover {
+.text-box .bx:hover {
   color: #759485;
   transition: all 0.5s;
 }
-
 img {
   width: 100%;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -132,7 +165,7 @@ img:hover {
 }
 .btn {
   background: transparent;
-  border: 1px solid white;
+  border: 1px solid #759485;
   padding: 15px 18px;
 }
 .btn:hover {
@@ -140,8 +173,15 @@ img:hover {
   color: white;
   border: transparent;
 }
+
+/*  DASHBOARD */
+
+/*  Responsive CSS */
 @media (max-width: 2000px) {
   .img-sec {
+    display: none;
+  }
+  .image-sec .br2 {
     display: none;
   }
 }
@@ -192,6 +232,9 @@ img:hover {
   .image-sec {
     display: none;
   }
+  .icons .bx {
+    display: none;
+  }
 }
 @media (max-width: 800px) {
   .text-content .row1 {
@@ -212,10 +255,14 @@ img:hover {
   .text-box .text3 {
     font-size: 16px;
   }
-}
-@media (max-width: 800px) {
   .image-sec {
     display: none;
+  }
+  .box {
+    width: 100%;
+  }
+  table {
+    margin-left: -100px;
   }
 }
 @media (max-width: 500px) {
@@ -234,15 +281,101 @@ img:hover {
   .text-box .br {
     display: none;
   }
+  .text-box .br1 {
+    display: inline;
+  }
   .text-box .text2 {
     font-size: 50px;
     font-weight: 600;
   }
-
   .text-box .text3 {
     font-size: 16px;
   }
   .row2 {
     display: none;
   }
+  .box {
+    width: 100%;
+    margin-left: -100%;
+  }
+  .box h2 {
+    font-size: 20px;
+  }
+  .box form {
+    width: 100%;
+  }
+}
+
+.nav-row {
+  color: #759485;
+  text-align: center;
+  padding: 20px 0px;
+}
+.nav-row span {
+  font-size: 30px;
+  font-family: lobster;
+}
+.icons .bx {
+  font-size: 25px;
+  padding: 10px 0px;
+  margin-right: 60px;
+}
+.icons {
+  margin-left: 100px;
+}
+.conternt-row {
+  text-align: center;
+}
+.conternt-row #buttons button {
+  margin: 10px 0px;
+  border: transparent;
+  color: #a9b4af;
+  padding: 15px;
+}
+.conternt-row #buttons button:hover {
+  color: white;
+  font-weight: 400;
+}
+.box {
+  float: left;
+  color: black;
+  width: 80%;
+  text-align: center;
+  display: none;
+  margin-left: 10%;
+}
+.show {
+  display: block;
+}
+.objects {
+  width: 100%;
+}
+.lebel {
+  color: black;
+}
+.box form {
+  color: #759485;
+}
+
+.box div .form-group input {
+  color: black;
+}
+.box .loninbtn {
+  margin-left: 0%;
+}
+.box .loninbtn a,
+.box .loninbtn button {
+  padding: 5px 20px;
+  color: teal;
+}
+.box .loninbtn a:hover,
+.box .loninbtn button:hover {
+  color: white;
+}
+
+.reset {
+  margin-left: 5%;
+}
+.close {
+  color: white;
 }
