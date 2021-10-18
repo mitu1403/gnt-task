@@ -1,43 +1,209 @@
-#hero {
+@font-face {
+  font-family: oswald;
+  src: url(../fonts/Oswald-Bold.ttf);
+}
+@font-face {
+  font-family: ptsans;
+  src: url(../fonts/PTSans-Regular.ttf);
+}
+body {
+  background-color: #232323;
+  font-family: "poppins", sans-serif;
+  overflow-x: hidden;
+}
+.main {
   height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  color: white;
-  justify-content: center;
+  background-image: linear-gradient(
+      rgba(35, 35, 35, 0.9),
+      rgba(35, 35, 35, 0.9)
+    ),
+    url(../img/texture.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
 }
-#hero::after {
-  width: 100%;
-  height: 100%;
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 10;
-}
-#hero video {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  object-fit: cover;
-}
-#hero .texture {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 15;
-  background: url("../img/texture.png");
-  opacity: 0.4;
+.banner {
+  z-index: 100;
 }
 
-#hero .caption {
+/*  Navbar  */
+.navset {
+  margin-left: 52%;
+}
+nav div ul li {
+  margin-left: 20%;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
   position: relative;
-  z-index: 20;
-  text-align: center;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+.bx-filter {
+  font-size: 35px;
+  color: white;
+}
+.text-box {
+  color: #fff;
+  line-height: 1;
+}
+.text-box .text1 {
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 10%;
+}
+.text-box .text2 {
+  font-size: 130px;
+  margin-left: -1%;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 600;
+  background: url(../img/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+@keyframes back {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+.text-box .text3 {
+  font-size: 35px;
+  font-weight: 500;
+}
+i {
+  font-size: 24px;
+}
+.bxl-linkedin-square,
+.bxl-github {
+  margin-left: 25px;
+}
+
+img {
+  width: 100%;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+@media (max-width: 2000px) {
+  .img-sec {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .navset {
+    margin-left: 45%;
+  }
+  nav div ul li {
+    margin-left: 17%;
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    height: 0px;
+  }
+  .text-box .text1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 10%;
+  }
+  .text-box .text2 {
+    font-size: 90px;
+    font-weight: 600;
+  }
+
+  .text-box .text3 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 1000px) {
+  .navset {
+    margin-left: -20%;
+  }
+  .text-box .text1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10%;
+  }
+  .text-box .text2 {
+    font-size: 80px;
+    font-weight: 600;
+  }
+
+  .text-box .text3 {
+    font-size: 25px;
+    font-weight: 400;
+  }
+}
+@media (max-width: 800px) {
+  .text-content .row1 {
+    display: none;
+  }
+  .row2 {
+    background-color: red;
+    margin-top: 1%;
+  }
+  .text-box .text1 {
+    font-size: 20px;
+  }
+  .text-box .text2 {
+    font-size: 80px;
+    font-weight: 400;
+  }
+
+  .text-box .text3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 800px) {
+  .image-sec {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .img-sec {
+    display: inline;
+  }
+  .img-sec img {
+    width: 70%;
+    margin: 0 auto;
+    height: 50vh;
+  }
+  .text-box .text1 {
+    font-size: 20px;
+  }
+  .text-box .br {
+    display: none;
+  }
+  .text-box .text2 {
+    font-size: 50px;
+    font-weight: 600;
+  }
+
+  .text-box .text3 {
+    font-size: 16px;
+  }
+  .row2 {
+    display: none;
+  }
 }
